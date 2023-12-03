@@ -126,6 +126,10 @@ button:focus,
   display: flex;
   flex-direction: column;
   text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .page-header {
@@ -165,9 +169,8 @@ td {
 table {
   width: 50%;
   border-collapse: collapse;
-  margin: 20px auto 20px auto;
+  margin: 20px auto;
   text-align: center;
-
 }
 
 th {

@@ -29,11 +29,23 @@ Palette URL: http://paletton.com/#uid=20H0u0kxyzjjTFfpmA9-BpVEkkn
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+  text-align: center;
 }
 
 h1 {
@@ -126,10 +138,7 @@ button:focus,
   display: flex;
   flex-direction: column;
   text-align: center;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  flex-shrink: 0;
 }
 
 .page-header {
@@ -282,3 +291,42 @@ th {
 .cloud-back {
   animation: 25s cloud-move-reverse infinite alternate linear;
 }
+
+/* contact form start */
+input[type=text],
+input[type=tel],
+input[type=email],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: var(--primary-color);
+  color: var(--secondary-text-color);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  opacity: 0.9;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: var(--secondary-color--lighter);
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+/* contact form end */
